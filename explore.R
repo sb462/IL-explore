@@ -56,6 +56,9 @@ vec <- c("a","b","c")
 paste0(vec,sep=",", collapse= "")
 
 paste0(a.list, sep=",", collapse="")
+
+paste0(vec, collapse=",")
+?paste0
 ?paste0
 # build list of 11 URLs
 
@@ -71,3 +74,8 @@ build.url <- function(fips.code){
 list.of.urls.jun2014 <- lapply(url.FIPS, FUN=build.url)
 
 list.of.urls.jun2014[[1]]
+
+sample.url <- "http://www.broadbandmap.gov/broadbandmap/demographic/2014/coordinates?latitude=42.456&longitude=-74.987&format=json"
+sample.data2 <- fromJSON(sample.url)
+str(sample.data2$Results)
+
